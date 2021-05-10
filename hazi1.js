@@ -21,17 +21,17 @@ for (let i = 0; i < players.length; i++) {
 
 const x = ['', 4, true];
 
-// készítünk egy függvényt, aminek bemeneti paramétere az x tömb lesz
-function myFunc(x) {
+// készítünk egy függvényt, melynek bemeneti paramétere egy array lesz
+function myFunc(array) {
   //létrehozunk egy üres tömböt
   const a = [];
-  //végigmegyünk a x tömbön
-  for (let i = 0; i < x.length; i++) {
-    //a push függvénnyel hozzáadjuk az x tömb elemeinek típusait az a tömbhöz
-    a.push(typeof (x[i]));
+  //végigmegyünk az array tömbön
+  for (let i = 0; i < array.length; i++) {
+    //a push függvénnyel hozzáadjuk az array tömb elemeinek típusait az a tömbhöz
+    a.push(typeof (array[i]));
   }
   //visszatérünk az a értékével
   return a;
 }
-//meghívjuk és kiírjuk a függvényt
+//meghívjuk a függvényt az x tömbre, majd kiírjuk
 console.log(myFunc(x));
